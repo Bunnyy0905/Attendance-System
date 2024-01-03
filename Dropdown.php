@@ -44,12 +44,14 @@ include('dbconnection.php');
 <label>Division:</label>
         <select>
             <?php 
-            $divs=mysqli_query($con, "Select * from div");
+            $divs=mysqli_query($con, "Select * from division");
             while($c=mysqli_fetch_array($divs)){
                 ?>
 <option value="<?php echo$c['ID']?>"><?php echo $c['division']?></option>
 <?php } ?>        
 </select>
+<button type="submit" name="submit">Submit</button>
+
     </form>
 </body>
 </html>
